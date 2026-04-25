@@ -1,16 +1,110 @@
-# React + Vite
+# Habiba Hassan Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio website built with React, Vite, and Tailwind CSS.  
+It highlights featured projects, experience, skills, education, and contact details in a clean one-page layout.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React
+- Vite
+- Tailwind CSS
+- ESLint
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Hero section with direct actions (email, LinkedIn, GitHub, CV download)
+- Featured projects with tools, GitHub links, and live demos
+- Experience timeline
+- Grouped skills section for better readability
+- Contact section with quick outreach actions
+- Minimal interactive button hover effects
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+src/
+  components/
+    HeroSection.jsx
+    ProjectsSection.jsx
+    ProjectCard.jsx
+    ExperienceSection.jsx
+    SkillsSection.jsx
+    ContactSection.jsx
+  data/
+    portfolioData.js
+  App.jsx
+  index.css
+public/
+  project-images/
+  HabibaHassanCV.pdf
+```
+
+## Getting Started
+
+### 1) Install dependencies
+
+```bash
+npm install
+```
+
+### 2) Run development server
+
+```bash
+npm run dev
+```
+
+### 3) Build for production
+
+```bash
+npm run build
+```
+
+### 4) Preview production build
+
+```bash
+npm run preview
+```
+
+## Customize Content
+
+Edit `src/data/portfolioData.js` to update:
+
+- Profile information
+- Project list
+- Experience entries
+- Skill groups
+- Education text
+- CV link (`profile.cvUrl`)
+
+## CV Download Setup
+
+To make the CV button work correctly:
+
+1. Put your PDF in `public/`
+2. Use the same filename referenced in data:
+
+```js
+cvUrl: '/HabibaHassanCV.pdf'
+```
+
+If you rename the file, update `cvUrl` to match exactly.
+
+## Deployment
+
+You can deploy this app on:
+
+- Vercel
+- Netlify
+- GitHub Pages (with routing setup if needed)
+
+Build command:
+
+```bash
+npm run build
+```
+
+Output directory:
+
+```text
+dist
+```
