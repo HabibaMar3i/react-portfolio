@@ -4,8 +4,15 @@ import ProjectsSection from './components/ProjectsSection'
 import SkillsSection from './components/SkillsSection'
 import ContactSection from './components/ContactSection'
 import { profileData } from './data/portfolioData'
+import { useEffect } from 'react'
+import { initAnalytics, trackPageView } from './lib/analytics'
 
 function App() {
+  useEffect(() => {
+    initAnalytics()
+    trackPageView()
+  }, [])
+
   return (
     <main className="min-h-screen bg-[#090b14] text-slate-100 selection:bg-fuchsia-400/30">
       <div className="pointer-events-none fixed inset-0 -z-10">

@@ -53,6 +53,17 @@ npm install
 npm run dev
 ```
 
+### Optional: Enable Google Analytics (GA4)
+
+1. Copy `.env.example` to `.env`
+2. Add your GA4 measurement ID:
+
+```bash
+VITE_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+```
+
+If `VITE_GA_MEASUREMENT_ID` is missing, analytics is skipped automatically.
+
 ### 3) Build for production
 
 ```bash
