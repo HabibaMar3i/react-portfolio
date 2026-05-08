@@ -22,8 +22,8 @@ function App() {
 
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-5 py-10 md:px-8 md:py-14">
         <HeroSection profile={profileData.profile} />
-        <ProjectsSection projects={profileData.projects} />
         <ExperienceSection experiences={profileData.experiences} />
+        <ProjectsSection projects={profileData.projects} />
         <SkillsSection skills={profileData.skills} education={profileData.education} />
         <ContactSection profile={profileData.profile} />
       </div>
